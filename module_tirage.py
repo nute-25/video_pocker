@@ -8,7 +8,7 @@ def premier_tirage(deck: list):
         carte = random.choice(deck)
         tirage.append(carte)
         deck.remove(carte)
-    return tirage, deck
+    return tirage
 
 # def choix_carte(tirage: list):
 #     jeu = []

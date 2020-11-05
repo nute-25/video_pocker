@@ -97,5 +97,5 @@ def partie(tirage_final: list, mise: int, bankroll: int):
     v_cartes, c_cartes = decompose_jeu(tirage_final)
     combinaison, coeff_combinaison = test_combinaison(v_cartes, c_cartes)
     gains, resultat = calculer_gains(mise, coeff_combinaison)
-    bankroll = bankroll - mise + gains
+    bankroll += gains
     return combinaison, resultat, bankroll
