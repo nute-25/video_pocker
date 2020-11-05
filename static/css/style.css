@@ -1,0 +1,33 @@
+body {
+    background-color: #003300;
+    font-family: 'Chivo', sans-serif;
+    color: #cc8800;
+}
+.navbar {
+    background: rgb(0,26,26);
+    border-top: #cc8800 8px solid;
+    border-bottom: #cc8800 8px solid;
+}
+.navbar-brand {
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #cc8800;
+}
+main {
+    padding-top: 2em;
+}
+h1 {
+    margin-bottom: 1rem;
+    font-family: 'Allura', cursive;
+}
+.row {
+    margin-bottom: 1em;
+}
+
+.fa-coins {
+    font-size: 50px;
+}
+
+.cartes {
+    width: 150px;
+}

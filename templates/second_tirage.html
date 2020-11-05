@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="row row-cols-2">
+    <div class="col">
+        <h1>Deuxième tirage</h1>
+    </div>
+    <div class="col d-flex flex-column align-items-end">
+        <i class="fas fa-coins"></i>
+        <span>{{ cagnotte }} €</span>
+    </div>
+</div>
+
+<p>{{ combinaison }} {{ resultat }}</p>
+<div class="row justify-content-center">
+    {% for carte in tirage %}
+        <div class="col-auto">
+            <img
+                class="img-fluid cartes"
+                id="{{ carte }}"
+                alt="carte {{ carte }}"
+                src="{{ url_for('static', filename='cartes/' + carte + '.jpg') }}"
+            />
+        </div>
+    {% endfor %}
+</div>
+
+
+<!-- <script>
+    const cartes = document.querySelectorAll(".cartes")
+    cartes.forEach(element => {
+        
+        element.addEventListener("click", (e) => {
+            console.log(e.target.id);
+        })
+    });
+    
+</script> -->
+{% endblock %}
+

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>Bienvenue</h1>
+<form method="POST" action="{{ url_for('init') }}">
+    <label>Pseudo</label>
+    <input name="pseudo" type="text" value=""/>
+    <label>Cagnotte</label>
+    <input name="cagnotte" type="number" value=""/>
+    <label>Mise</label>
+    <input name="mise" type="number" value=""/>
+    <button type="submit">Lancer le jeu !</button>
+</form>
+{% endblock %}
