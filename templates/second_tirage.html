@@ -6,12 +6,13 @@
         <h1>Deuxième tirage</h1>
     </div>
     <div class="col">
-        <div class="row row-cols-2">
-            <div class="col d-flex flex-column align-items-end">
+        <div class="row row-cols-3">
+            <div class="col"></div>
+            <div class="col col-auto d-flex flex-column align-items-center">
                 <i class="fas fa-hand-holding"></i>
                 <span>{{ mise }} €</span>
             </div>
-            <div class="col d-flex flex-column">
+            <div class="col col-auto d-flex flex-column align-items-center">
                 <i class="fas fa-coins"></i>
                 <span>{{ cagnotte }} €</span>
             </div>
@@ -19,7 +20,7 @@
     </div>
 </div>
 
-<p>{{ combinaison }} {{ resultat }}</p>
+<p class="text-center">{{ combinaison }} {{ resultat }}</p>
 <div class="row justify-content-center">
     {% for carte in tirage %}
         <div class="col-auto">
@@ -33,22 +34,15 @@
     {% endfor %}
 </div>
 
-<a href="{{ url_for('init') }}"> Mise</a>
-<a href="{{ url_for('index') }}"> Quitter</a>
-{% if cagnotte <= 0 %}
-    <a href="{{ url_for('index') }}"> Rejouer <i class="fas fa-redo"></i> </a>
-{% endif %}
-
-
-<!-- <script>
-    const cartes = document.querySelectorAll(".cartes")
-    cartes.forEach(element => {
-        
-        element.addEventListener("click", (e) => {
-            console.log(e.target.id);
-        })
-    });
-    
-</script> -->
+<div class="row justify-content-center">
+    <div class="btn-group" role="group">
+        {% if cagnotte > 0 %}
+            <a class="btn btn-light" role="button" href="{{ url_for('init') }}">Miser</a>
+        <a class="btn btn-light" role="button" href="{{ url_for('index') }}">Quitter</a>
+        {% else %}
+            <a class="btn btn-light" role="button" href="{{ url_for('index') }}">Rejouer</a>
+        {% endif %}
+    </div>
+</div>
 {% endblock %}
 

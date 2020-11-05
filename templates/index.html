@@ -2,12 +2,22 @@
 
 {% block body %}
 <h1>Bienvenue</h1>
-<span>{{ erreur }}</span>
+<span id="erreur" class="d-flex justify-content-center">{{ erreur }}</span>
 <form method="POST" action="{{ url_for('init') }}">
-    <label>Cagnotte</label>
-    <input name="cagnotte" type="number" value=""/>
-    <label>Mise</label>
-    <input name="mise" type="number" value=""/>
-    <button type="submit">Lancer le jeu !</button>
+    <div class="form-group row justify-content-center align-items-center">
+        <label for="cagnotte" class="col col-3">Veuillez insérer de l'argent&nbsp: </label>
+        <div class="col col-auto">
+            <input id="cagnotte" class="form-control" type="number" name="cagnotte" value="" placeholder="ex : 300€, 50€ ..."/>
+        </div>
+    </div>
+    <div class="form-group row justify-content-center align-items-center">
+        <label for="mise" class="col col-3">Faites vos jeux&nbsp:</label>
+        <div class="col col-auto">
+            <input id="mise" class="form-control" type="number" name="mise" value="" placeholder="ex : 10€, 100€ ..."/>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <button type="submit" class="btn btn-light col-3">Lancer le jeu !</button>
+    </div>
 </form>
 {% endblock %}

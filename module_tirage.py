@@ -1,7 +1,6 @@
 import random
 # from module_questionbooleenne import *
 
-
 def premier_tirage(deck: list):
     tirage = []
     for _ in range(5):

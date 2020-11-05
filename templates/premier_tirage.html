@@ -6,12 +6,13 @@
         <h1>Premier tirage</h1>
     </div>
     <div class="col">
-        <div class="row row-cols-2">
-            <div class="col d-flex flex-column align-items-end">
+        <div class="row row-cols-3">
+            <div class="col"></div>
+            <div class="col col-auto d-flex flex-column align-items-center">
                 <i class="fas fa-hand-holding"></i>
                 <span>{{ mise }} €</span>
             </div>
-            <div class="col d-flex flex-column">
+            <div class="col col-auto d-flex flex-column align-items-center">
                 <i class="fas fa-coins"></i>
                 <span>{{ cagnotte }} €</span>
             </div>
@@ -19,9 +20,8 @@
     </div>
 </div>
 
-
 <form method="POST" action="{{ url_for('jeu_final') }}">
-    <p>Quelles cartes souhaitez-vous garder ?</p>
+    <p class="text-center">Quelle(s) carte(s) souhaitez-vous garder ?</p>
     <div class="row justify-content-center">
         {% for carte in tirage %}
             <div class="col-auto">
@@ -44,18 +44,9 @@
             </div>
         {% endfor %}
     </div>
-    <button type="submit">Continuer</button>
+    <div class="row justify-content-center">
+        <button class="btn btn-light" type="submit">Continuer</button>
+    </div>
 </form>
-
-<!-- <script>
-    const cartes = document.querySelectorAll(".cartes")
-    cartes.forEach(element => {
-        
-        element.addEventListener("click", (e) => {
-            console.log(e.target.id);
-        })
-    });
-    
-</script> -->
 {% endblock %}
 

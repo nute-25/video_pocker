@@ -11,6 +11,9 @@ body {
 .navbar-brand {
     font-size: 50px;
     text-transform: uppercase;
+    color: #e69900;
+}
+.navbar-brand:hover {
     color: #cc8800;
 }
 main {
@@ -22,6 +25,17 @@ h1 {
 }
 .row {
     margin-bottom: 1em;
+}
+
+.erreur {
+    background-color: #800000;
+    padding: 8px 0;
+    border: 3px #cc0000 solid;
+    margin-bottom: 1rem;
+}
+#cagnotte,
+#mise {
+    max-width: 200px;
 }
 
 .fa-hand-holding,
